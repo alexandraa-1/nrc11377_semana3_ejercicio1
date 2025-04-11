@@ -93,6 +93,7 @@ public class ventana extends JFrame implements ActionListener {
 			contentPane.add(scrollPane);
 			{
 				txts = new JTextArea();
+				txts.setText("verificancdo ");
 				scrollPane.setViewportView(txts);
 			}
 		}
