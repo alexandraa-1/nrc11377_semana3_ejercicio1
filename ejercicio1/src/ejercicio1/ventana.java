@@ -25,10 +25,10 @@ public class ventana extends JFrame implements ActionListener {
 	private JTextArea txtn2;
 	private JTextArea txtn3;
 	private JScrollPane scrollPane;
-	private JTextPane txts;
 	private JButton btnNewButton;
 	private JButton btnNewButton_1;
 	private JButton btnNewButton_2;
+	private JTextArea txts;
 
 	/**
 	 * Launch the application.
@@ -92,7 +92,7 @@ public class ventana extends JFrame implements ActionListener {
 			scrollPane.setBounds(48, 181, 310, 119);
 			contentPane.add(scrollPane);
 			{
-				txts = new JTextPane();
+				txts = new JTextArea();
 				scrollPane.setViewportView(txts);
 			}
 		}
