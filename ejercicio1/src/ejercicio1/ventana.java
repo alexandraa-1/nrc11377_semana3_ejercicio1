@@ -51,7 +51,7 @@ public class ventana extends JFrame implements ActionListener {
 	 */
 	public ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 367);
+		setBounds(100, 100, 599, 367);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -59,32 +59,32 @@ public class ventana extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 		{
 			lblNewLabel = new JLabel("PRIMER NÚMERO:");
-			lblNewLabel.setBounds(24, 40, 88, 14);
+			lblNewLabel.setBounds(24, 40, 117, 14);
 			contentPane.add(lblNewLabel);
 		}
 		{
 			lblNewLabel_1 = new JLabel("SEGUNDO NÚMERO:");
-			lblNewLabel_1.setBounds(24, 83, 98, 14);
+			lblNewLabel_1.setBounds(24, 83, 117, 14);
 			contentPane.add(lblNewLabel_1);
 		}
 		{
 			lblNewLabel_2 = new JLabel("TERCER NÚMERO:");
-			lblNewLabel_2.setBounds(24, 127, 89, 14);
+			lblNewLabel_2.setBounds(24, 127, 117, 14);
 			contentPane.add(lblNewLabel_2);
 		}
 		{
 			txtn1 = new JTextArea();
-			txtn1.setBounds(122, 35, 89, 22);
+			txtn1.setBounds(151, 35, 89, 22);
 			contentPane.add(txtn1);
 		}
 		{
 			txtn2 = new JTextArea();
-			txtn2.setBounds(132, 78, 89, 22);
+			txtn2.setBounds(151, 78, 89, 22);
 			contentPane.add(txtn2);
 		}
 		{
 			txtn3 = new JTextArea();
-			txtn3.setBounds(120, 122, 91, 22);
+			txtn3.setBounds(149, 122, 91, 22);
 			contentPane.add(txtn3);
 		}
 		{
@@ -93,30 +93,34 @@ public class ventana extends JFrame implements ActionListener {
 			contentPane.add(scrollPane);
 			{
 				txts = new JTextArea();
-				txts.setText("verificancdo ");
+				txts.setText("verificando ");
 				scrollPane.setViewportView(txts);
 			}
 		}
 		{
 			btnNewButton = new JButton("SUMAR 2 ENTEROS");
 			btnNewButton.addActionListener(this);
-			btnNewButton.setBounds(257, 36, 101, 23);
+			btnNewButton.setBounds(257, 36, 138, 23);
 			contentPane.add(btnNewButton);
 		}
 		{
 			btnNewButton_1 = new JButton("SUMAR 3 ENTEROS");
 			btnNewButton_1.addActionListener(this);
-			btnNewButton_1.setBounds(257, 74, 101, 23);
+			btnNewButton_1.setBounds(257, 74, 138, 23);
 			contentPane.add(btnNewButton_1);
 		}
 		{
 			btnNewButton_2 = new JButton("SUMAR 2 REALES");
-			btnNewButton_2.setBounds(257, 123, 101, 23);
+			btnNewButton_2.addActionListener(this);
+			btnNewButton_2.setBounds(257, 123, 138, 23);
 			contentPane.add(btnNewButton_2);
 		}
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnNewButton_2) {
+			do_btnNewButton_2_actionPerformed(e);
+		}
 		if (e.getSource() == btnNewButton_1) {
 			do_btnNewButton_1_actionPerformed(e);
 		}
@@ -147,5 +151,8 @@ public class ventana extends JFrame implements ActionListener {
 		}catch(Exception e2){
 			JOptionPane.showMessageDialog(this, "Ingrese número reales");
 		}
+	}
+	protected void do_btnNewButton_2_actionPerformed(ActionEvent e) {
+	
 	}
 }
