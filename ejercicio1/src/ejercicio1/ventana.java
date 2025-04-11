@@ -136,7 +136,7 @@ public class ventana extends JFrame implements ActionListener {
 			txts.setText("");
 			txts.append("La suma es: " +c.sumar(n1, n2));
 		}catch(Exception e2){
-			JOptionPane.showMessageDialog(this, "Ingrese número reales");
+			JOptionPane.showMessageDialog(this, "NO INGRESÓ UN NÚMERO REAL, Ingrese un número real");
 		}
 		
 	}
